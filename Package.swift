@@ -5,17 +5,17 @@ let package = Package(
     name: "macseum.dk",
     products: [
         .library(
-            name: "macseum.dk",
-            targets: ["macseum.dk"]),
+            name: "Macseum",
+            targets: ["Macseum"]),
     ],
     dependencies: [
         .package(url: "https://github.com/johnsundell/publish", .upToNextMajor(from: "0.8.0")),
-    ],
+    ],  
     targets: [
         .target(
-            name: "macseum.dk",
+            name: "Macseum",
             dependencies: [.product(name: "Publish", package: "publish")]),
         .testTarget(
-            name: "macseum.dkTests",
-            dependencies: ["macseum.dk"]),
+            name: "MacseumTests",
+            dependencies: ["Macseum"]),
     ])
